@@ -10,7 +10,14 @@ end
 
 # El khalil
 
-animals_list = ['fox', 'bear', 'pinguin', 'rabbit']
+animals = ["fox", "bear", "rabbit", "pinguin"]
+puts animals
+places = [
+    "iceflo_igloo",
+    "iceflo_fishing",
+    "bridge"
+]
+puts places
 
 # Ouissam - vérifier iglou
 
