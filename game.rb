@@ -41,7 +41,7 @@ def init
     return board
 end
 
-board = init
+board = init   # initialiser le jeux
 dice = shoot
 begin
     if dice == "bridge" 
