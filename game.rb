@@ -1,3 +1,5 @@
+@animals_list =[] 
+places =[]
 # Hind
 bridge = {
     :pilar_count => 6
@@ -8,18 +10,24 @@ def remove_pilar board
     board[:bridge][:pilar_count] -= 1
 end
 
-# El khalil
+def move_bridge_igloo board
 
-animals = ["fox", "bear", "rabbit", "pinguin"]
-puts animals
-places = [
-    "iceflo_igloo",
-    "iceflo_fishing",
-    "bridge"
-]
-puts places
+end
+
+# El khalil
+def init_animals_places
+    @animals_list = ["fox", "bear", "rabbit", "pinguin"]
+    
+    places = [
+        "iceflo_igloo",
+        "iceflo_fishing",
+        "bridge"
+    ]
+end
 
 # Ouissam - vérifier iglou
+def move_bridge_igloo board
+end
 
 def check_home board
     if board[:igloo][:animals].length == 4
@@ -37,29 +45,30 @@ end
 # Johann
 
 def shoot
-    dice = [ "igloo", "bridge", "ice", "igloo", "bridge", "ice"].shuffle
+    dice = [ "igloo", "bridge", "ice"].shuffle
     dice[0]
 end
 
-puts "Votre dé affiche: #{shoot}"
+#puts "Votre dé affiche: #{shoot}"
 
 # Patrick
 
 #Ouissem - principal
 def init 
-    board={field: {animals: animals_list} , bridge: {animals: [] , pilar_count: 6} , igloo: {animals: []}}    
+    board={field: {animals: @animals_list} , bridge: {animals: [] , pilar_count: 6} , igloo: {animals: []}}    
     return board
 end
 
+init_animals_places
 board = init   # initialiser le jeux
 dice = shoot
 begin
     if dice == "bridge" 
         move_field_bridge
     elsif dice=="ice"
-        remove_pilar
+        remove_pilar board
     else
-        move_bridge_igloo
+        move_bridge_igloo board
     end
 end while (check_home board)=="relaunch"
 
