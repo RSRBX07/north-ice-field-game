@@ -18,7 +18,7 @@
 
 
 def shoot
-    dice = [ "igloo", "bridge", "ice", "igloo", "bridge", "ice",].shuffle
+    dice = [ "igloo", "bridge", "ice", "igloo", "bridge", "ice"].shuffle
     puts dice[0]
 end
 
