@@ -4,4 +4,6 @@
 
 # Ouissam
 
+finish = "igloo"
+
 # Yohann
