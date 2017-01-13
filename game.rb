@@ -20,8 +20,5 @@ end
 
 puts "Votre dé affiche: #{shoot}"
 
-# Yohann
-
 # Patrick
 
-# Johann
