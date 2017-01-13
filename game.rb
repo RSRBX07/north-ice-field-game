@@ -8,7 +8,12 @@ puts bridge
 
 animals = ["fox", "bear", "rabbit", "pinguin"]
 puts animals
-def methode argument
+places = [
+    "iceflo_igloo",
+    "iceflo_fishing",
+    "bridge"
+]
+puts places
 # Ouissam
 finish="igloo"
 
