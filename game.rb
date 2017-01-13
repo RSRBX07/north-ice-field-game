@@ -9,6 +9,7 @@ puts bridge
 animaux = ['chat', 'ours', 'renard', 'lapin']
 puts animaux
 # Ouissam
+finish="igloo"
 
 # Johann
 
