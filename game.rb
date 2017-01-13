@@ -6,8 +6,9 @@ puts bridge
 
 # El khalil
 
-animaux = ['chat', 'ours', 'renard', 'lapin']
-puts animaux
+animals = ["fox", "bear", "rabbit", "pinguin"]
+puts animals
+def methode argument
 # Ouissam
 finish="igloo"
 
