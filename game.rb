@@ -4,25 +4,21 @@ bridge = {
 }
 puts bridge
 
-def remove_pilar bridge
-    bridge[:pilar_count] -= 1
+def remove_pilar board
+    board[:bridge][:pilar_count] -= 1
 end
-
-remove_pilar bridge
-puts bridge
 
 # El khalil
 
-animaux = ['chat', 'ours', 'renard', 'lapin']
-puts animaux
+animals_list = ['chat', 'ours', 'renard', 'lapin']
 
 # Ouissam - vérifier iglou
 
 def check_home board
-    if board[igloo] == 6
+    if board[:igloo][:animals].length == 4
         puts("partie gagnée")
         return "win"
-    elsif board[:bridge][pilars] == 0        
+    elsif board[:bridge][:pilar_count] == 0        
         puts("partie perdu")
         return "lost"
     else
@@ -44,7 +40,7 @@ puts "Votre dé affiche: #{shoot}"
 
 #Ouissem - principal
 def init 
-    board={field: {animals: 4} , bridge: {animals: 0 , pilars: 6} , igloo: {animals: 0}}    
+    board={field: {animals: animals_list} , bridge: {animals: [] , pilar_count: 6} , igloo: {animals: []}}    
     return board
 end
 
@@ -53,8 +49,8 @@ dice = shoot
 begin
     if dice == "bridge" 
         move_field_bridge
-    elsif dice==pilars
-        remove_pilars
+    elsif dice=="ice"
+        remove_pilar
     else
         move_bridge_igloo
     end
