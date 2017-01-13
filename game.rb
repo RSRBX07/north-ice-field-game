@@ -1,4 +1,8 @@
 # Hind
+bridge = {
+    :pilar_count => 6
+}
+puts bridge
 
 # El khalil
 
@@ -9,5 +13,7 @@ puts animaux
 # Johann
 
 # Yohann
+
+# Patrick
 
 # Johann
