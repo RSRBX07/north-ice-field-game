@@ -4,6 +4,13 @@ bridge = {
 }
 puts bridge
 
+def remove_pilar bridge
+    bridge[:pilar_count] -= 1
+end
+
+remove_pilar bridge
+puts bridge
+
 # El khalil
 
 animaux = ['chat', 'ours', 'renard', 'lapin']
