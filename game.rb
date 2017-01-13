@@ -11,7 +11,13 @@ def remove_pilar board
 end
 
 def move_bridge_igloo board
-
+    if board[:bridge][:animals].length > 0
+        print "Choisir un numero d'animal parmi : "
+        print board[:bridge][:animals]
+        numero = gets.chomp.to_i
+        board[:igloo][:animals].push board[:bridge][:animals][numero-1]
+        board[:bridge][:animals].delete_at numero-1
+    end
 end
 
 # El khalil
@@ -26,7 +32,7 @@ def init_animals_places
 end
 
 # Ouissam - vérifier iglou
-def move_bridge_igloo board
+def move_field_bridge board
 end
 
 def check_home board
@@ -62,9 +68,10 @@ end
 init_animals_places
 board = init   # initialiser le jeux
 dice = shoot
+move_bridge_igloo board
 begin
     if dice == "bridge" 
-        move_field_bridge
+        move_field_bridge board
     elsif dice=="ice"
         remove_pilar board
     else
