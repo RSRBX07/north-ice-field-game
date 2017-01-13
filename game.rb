@@ -10,7 +10,7 @@ end
 
 # El khalil
 
-animals_list = ['chat', 'ours', 'renard', 'lapin']
+animals_list = ['fox', 'bear', 'pinguin', 'rabbit']
 
 # Ouissam - vérifier iglou
 
