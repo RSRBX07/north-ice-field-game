@@ -5,10 +5,9 @@ class Road
     @road_size = 5
   end 
 
-  def card_number
-    @road_size - 1
+  def add_step
+    @road_size -= 1
   end  
-
 end 
 
 
