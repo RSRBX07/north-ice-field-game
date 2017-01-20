@@ -1,4 +1,4 @@
-class Road
+class Raod
   attr_reader :raod_size
 
   def initialize
