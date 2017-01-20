@@ -1,7 +1,7 @@
 class Fruit
   attr_reader :cueilli
   attr_reader :color
-  attr_reader :fruit_nombre
+
   COLORS = [:red, :blue, :yellow, :green]
     
   def initialize color_symbol
