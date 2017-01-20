@@ -1,14 +1,13 @@
 class Road
-  attr_reader :raod_size
+  attr_reader :road_size
 
   def initialize
     @road_size = 5
   end 
 
-  def card_number
-    @road_size - 1
+  def add_step
+    @road_size -= 1
   end  
-
 end 
 
 

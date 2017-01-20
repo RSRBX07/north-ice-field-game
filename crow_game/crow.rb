@@ -1,7 +1,7 @@
 class Crow
   attr_reader :position , :state
   def initialize
-    @position = 1
+    @position = 0
     @state= "hungry"
   end
   def move    

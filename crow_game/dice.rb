@@ -4,8 +4,6 @@ class Dice
     @faces.sample
   end
 
-  private
-
   def initialize 
     @faces=["corbeau","panier","rouge","vert","jaune","bleu"] 
   end

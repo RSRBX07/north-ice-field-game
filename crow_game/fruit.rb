@@ -1,7 +1,7 @@
 class Fruit
   attr_reader :cueilli
   attr_reader :color
-  attr_reader :fruit_nombre
+
   COLORS = [:red, :blue, :yellow, :green]
     
   def initialize color_symbol
@@ -12,12 +12,5 @@ class Fruit
     @color = color_symbol
   end
 
-
-  def decroche_toi
-    @color = 55
-    @fruit_nombre -= 1
-    puts "le fruit est cueilli, et se trouve donc dans le panier"
-
-  end
 end
 
