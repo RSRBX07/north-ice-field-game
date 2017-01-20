@@ -1,4 +1,4 @@
-class Fruits
+class Fruit
 
 
 
