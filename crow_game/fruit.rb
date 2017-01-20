@@ -1,24 +1,22 @@
 class Fruit
   attr_reader :cueilli
   attr_reader :color
-end
+  attr_reader :fruit_nombre
+  COLORS =[red, blue, yellow, green]
+    
+  def initialize 
+    @fruit_nombre = 4
+    @color = COLORS[:red]
+    @cueilli = false
+
+    puts " le fruit n'est pas cueilli, il est toujours positionné sur l'arbre"
+  end
 
 
+  def decroche_toi (COLORS[0])
+    @color = 
+    @fruit_nombre -= 1
+    puts "le fruit est cueilli, et se trouve donc dans le panier"
 
-def initialize
-  @color = 4
-  @cueilli = false
-  puts " le fruit n'est pas cueilli, il est toujours positionné sur l'arbre"
-end
-private
-def cueilli
-  @cueilli = true
-  puts "le fruit est cueilli"
-end
-
-def decroche_toi(color)
-  @color = color
-  @color -= 1
-  puts "le fruit est cueilli, et se trouve donc dans le panier"
-
+  end
 end
