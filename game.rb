@@ -1,6 +1,6 @@
 @animals_list =[] 
 places =[]
-# Hind
+
 bridge = {
     :pilar_count => 6
 }
@@ -20,7 +20,6 @@ def move_bridge_igloo board
     end
 end
 
-# El khalil
 def init_animals_places
     @animals_list = ["fox", "bear", "rabbit", "pinguin"]
     
@@ -31,7 +30,6 @@ def init_animals_places
     ]
 end
 
-# Ouissam - vérifier iglou
 def move_field_bridge board
 end
 
@@ -48,18 +46,13 @@ def check_home board
     end
 end
 
-# Johann
 
 def shoot
     dice = [ "igloo", "bridge", "ice"].shuffle
     dice[0]
 end
 
-#puts "Votre dé affiche: #{shoot}"
 
-# Patrick
-
-#Ouissem - principal
 def init 
     board={field: {animals: @animals_list} , bridge: {animals: [] , pilar_count: 6} , igloo: {animals: []}}    
     return board
