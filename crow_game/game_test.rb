@@ -13,26 +13,47 @@ dice = Dice.new
 # print field
 
 begin
-  face = dice.roll  
-  if face == "corbeau" 
-      puts (road.add_step).inspect    
-  elsif face == "rouge"
-      puts field.fruit_remove "red"
-  elsif face == "vert"
-      puts field.fruit_remove "green"
-  elsif face == "jaune"
-      puts field.fruit_remove "yellow"
-  elsif face == "bleu"
-      puts field.fruit_remove "blue"  
-  end
-
-end while !(field.basket.is_full?) && (road.road_size >0)
+    face = dice.roll  
+    print "face  =  #{face}  ===>  "
+    if face == "panier" 
+        max = field.fruit_rest('red')
+        face= "rouge"
+        if field.fruit_rest('green') > max
+            max = field.fruit_rest('green')
+            face="vert"
+        end
+        if field.fruit_rest('yellow') > max
+            max = field.fruit_rest('yellow')
+            face="jaune"
+        end
+        if field.fruit_rest('blue') > max
+            max = field.fruit_rest('blue')
+            face="bleu"
+        end
+    end
+    if face == "corbeau" 
+        road.add_step
+        crow.move
+        puts "Courbeau avance, il reste #{road.road_size} pas."
+    elsif (face == "rouge") && (field.fruit_rest('red')>0)
+        field.fruit_remove "red"
+        puts "fruit rouge recueilli, il reste #{field.fruit_rest 'red'} fruits rouges"
+    elsif (face == "vert") && (field.fruit_rest('green')>0)
+        field.fruit_remove "green"
+        puts "fruit vert recueilli, il reste #{field.fruit_rest 'green'} fruits verts"
+    elsif (face == "jaune") && (field.fruit_rest('yellow')>0)
+        field.fruit_remove "yellow"
+        puts "fruit jaune recueilli, il reste #{field.fruit_rest 'yellow'} fruits jaunes"
+    elsif (face == "bleu") && (field.fruit_rest('blue')>0)
+        field.fruit_remove "blue"  
+        puts "fruit bleu recueilli, il reste #{field.fruit_rest 'blue'} fruits bleus"
+    else    
+        puts "il n'ya plus de fruits #{face}s."
+    end    
+end while !(field.is_basket_full?) && (road.road_size >0)
 
 if field.basket.is_full?
     puts "vous avez gagné"
-    else
-      puts "vous avez perdu"
-      end
-
-
-
+else
+    puts "vous avez perdu"
+end
