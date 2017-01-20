@@ -1,7 +1,7 @@
 class Dice 
   
   def roll
-    @faces[rand(1..6)]
+    @faces.sample
   end
 
   private
