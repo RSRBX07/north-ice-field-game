@@ -1,9 +1,9 @@
 class Crow
 
-  def initialize(position)
-    @position = position
+  def initialize
+    @position = 1
   end
-  def move()
-
+  def move
+    @position += 1
   end
 end
