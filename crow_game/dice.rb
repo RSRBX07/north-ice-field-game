@@ -1,5 +1,5 @@
-class Dice 
-  
+# Classe de Dé
+class Dice   
   def roll
     @faces.sample
   end
