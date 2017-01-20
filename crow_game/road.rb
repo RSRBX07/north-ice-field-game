@@ -1,5 +1,5 @@
 class Road
-  attr_reader :raod_size
+  attr_reader :road_size
 
   def initialize
     @road_size = 5
